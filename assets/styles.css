@@ -21,8 +21,10 @@ a:hover {
 /* NAV */
 
 #nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 9999;
 }
 
@@ -34,23 +36,8 @@ nav {
   justify-content: center;
 }
 
-.nav-inner {
-  width: min(1120px, 90%);
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 0;
-}
-
-nav a {
-  border: 0;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(234,234,234,0.6);
-}
-
-nav a:hover {
-  color: #fff;
+body {
+  padding-top: 52px;
 }
 
 /* LAYOUT */
