@@ -15,15 +15,23 @@
 <main class="page">
 
 <!-- HERO -->
-<section style="margin-top: 80px;">
-  <div class="meta">MUSIC · PHOTOGRAPHY · PRODUCTION</div>
+<section class="hero">
 
-  <h1>Matti Kärki</h1>
-
-  <div class="intro" style="margin-top: 30px;">
-    Musician, producer and photographer.  
-    Explore my albums, collaborations and visual work.
+  <div class="cover">
+    <img src="images/mk.jpg" alt="Matti Kärki">
   </div>
+
+  <div>
+    <div class="meta">MUSIC · PHOTOGRAPHY · PRODUCTION</div>
+
+    <h1>Matti Kärki</h1>
+
+    <div class="intro">
+      Musician, producer and photographer.  
+      Explore my albums, collaborations and visual work.
+    </div>
+  </div>
+
 </section>
 
 <div class="rule"></div>
@@ -36,7 +44,7 @@
 
     <p><a href="music/masa/index.html">About Masa</a></p>
     <p><a href="music/intothelight/index.html">Into The Light (2024)</a></p>
-    <p><a href="music/songsfrommylonelyheart/index.html">Songs From My Lonely Heart (2018)</a></p>
+    <p><a href="music/songsfrommylonelyheart/index.html">Songs from My Lonely Heart (2018)</a></p>
     <p><a href="music/40cyclessoundscapes/index.html">40 Cycles Soundscapes (2022)</a></p>
     <p><a href="music/vibrations/index.html">Vibrations (1995)</a></p>
     <p><a href="music/studio/index.html">Studio</a></p>
@@ -62,7 +70,7 @@
       </a>
     </p>
 
-    <p style="opacity:0.6;">
+    <p>
       vonspets69 at gmail dot com
     </p>
   </div>
@@ -70,13 +78,21 @@
 </section>
 
 <div class="rule"></div>
+</main>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  &copy; 2026 Matti Kärki
-</footer>
+<div id="footer">
+</div>
 
-</main>
+<script>
+  const load = (id, file) => {
+    fetch(file)
+      .then(res => res.text())
+      .then(data => document.getElementById(id).innerHTML = data);
+  };
+
+  load('footer', 'assets/footer.html');
+</script>
 
 </body>
 </html>
