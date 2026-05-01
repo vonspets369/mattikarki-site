@@ -148,6 +148,11 @@ p {
   width: min(1120px, 90%);
   margin: 0 auto;
   text-align: center;
+
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(234,234,234,0.35);
 }
 
 /* PAGE CONTENTS */
