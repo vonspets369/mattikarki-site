@@ -11,13 +11,9 @@
 <link rel="stylesheet" href="../lightbox/dist/css/lightbox.min.css">
 <script src="../lightbox/dist/js/lightbox-plus-jquery.js"></script>
 <link href="../lightbox/lightbox.css" rel="stylesheet">
-<link rel="stylesheet" href="../css/1.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="../css/2.css">
-
+<link rel="stylesheet" href="../css/styles.css"> 
 </head>
-
-
 
 <body>
 
@@ -25,41 +21,20 @@
   <source src="../_videos/gold.mp4" type="video/mp4">
 </video>
 
-<!-- Navbar -->
+<button class="sub-menu-toggle" onclick="toggleSubMenu()">☰ Valitse kappale</button>
 
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">TOP</a>
-    <div class="w3-dropdown-hover">
-      <a href="#songs" class="w3-bar-item w3-button w3-padding-large">SONGS</a>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#outofthedarkness" class="w3-bar-item w3-button">1  Out of the darkness</a>
-        <a href="#goinghome" class="w3-bar-item w3-button">2  Going Home</a>
-        <a href="#housewithbrokenmirrors" class="w3-bar-item w3-button">3  House with Broken Mirrors</a>
-        <a href="#savemysoul" class="w3-bar-item w3-button">4  Save My Soul</a>
-        <a href="#deadlycombination" class="w3-bar-item w3-button">5  Deadly Combinatio</a>
-        <a href="#saintindisguise" class="w3-bar-item w3-button">6  Saint in Disguise</a>
-        <a href="#iwillmakeituptoyou" class="w3-bar-item w3-button">7  I Will Make It up to You</a>
-        <a href="#something" class="w3-bar-item w3-button">8  Something</a>
-        <a href="#talkinginmysleep" class="w3-bar-item w3-button">9 Talking In My Sleep</a>
-      </div>
-    </div>
-<!-- piiloon
-    <a href="#masa" class="w3-bar-item w3-button w3-padding-large">MATTI</a>
-    <a href="#studio" class="w3-bar-item w3-button w3-padding-large">STUDIO</a>
-    <a href="#musicians" class="w3-bar-item w3-button w3-padding-large">MUSICIANS</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
--->
-
-</div>
-
-</div>
-
-<!-- Page content -->
-
-
-
+<nav id="sub-nav">
+    <a href="#" onclick="toggleSubMenu()"><button>TOP</button></a>
+    <a href="#outofthedarkness" onclick="toggleSubMenu()"><button>1 Out of the darkness</button></a>
+    <a href="#goinghome" onclick="toggleSubMenu()"><button>2 Going Home</button></a>
+    <a href="#housewithbrokenmirrors" onclick="toggleSubMenu()"><button>3 House with Broken Mirrors</button></a>
+    <a href="#savemysoul" onclick="toggleSubMenu()"><button>4 Save My Soul</button></a>
+    <a href="#deadlycombination" onclick="toggleSubMenu()"><button>5 Deadly Combination</button></a>
+    <a href="#saintindisguise" onclick="toggleSubMenu()"><button>6 Saint in Disguise</button></a>
+    <a href="#iwillmakeituptoyou" onclick="toggleSubMenu()"><button>7 I Will Make It up to You</button></a>
+    <a href="#something" onclick="toggleSubMenu()"><button>8 Something</button></a>
+    <a href="#talkinginmysleep" onclick="toggleSubMenu()"><button>9 Talking In My Sleep</button></a>
+</nav>
 
 <div class="box" id="intro">
 <br>
@@ -82,7 +57,7 @@ I wanted to give you more than just mp3's on some boring online music service. H
 Get your coolest headphones or turn your hifi stereo set on, hit the play button and enjoy. 
 <br>
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=gpwlVrEb7ut6XuZI&amp;list=OLAK5uy_mG08OyqH9TNz-V6Eqn7QG0D8MgRETSMAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=gpwlVrEb7ut6XuZI&list=OLAK5uy_mG08OyqH9TNz-V6Eqn7QG0D8MgRETSMAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <br>
 <br>
 If you prefer, you can use <a href="https://open.spotify.com/album/4e7tCtGBJlThzgCIxM4gSt?si=Mj-WDjm5RfiiweT8cu3vpQ" target="_blank">
@@ -92,16 +67,13 @@ Spotify</a> instead of Youtube.
 You can also buy my albums on
 <a href="https://amazon.com/music/player/artists/B001E721D2/matti-k%25C3%25A4rki?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_PGEurPuXRtB8zYUoYwjADMMVi" target="_blank">Amazon.</a>
 
-	</div>
-
-  <!-- Biisi 1 -->
+    </div>
 
   <div class="box" id="outofthedarkness">
     <img src="images/outofthedarkness.jpg" style="width:100%">
 <h2 class="w3-wide"> Out of the Darkness</h2>
 
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="images/heikki.jpg" data-lightbox="outofthedarkness" data-title="Click the right half of the image to move forward.">Heikki Vähänen bass</a>
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="outofthedarkness" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
     </p>
@@ -130,7 +102,7 @@ I'm useless like a shadow in the night<br>
 I know I could be so much more<br>
 It has been so hard to live in a lie<br>
 When I spread my wings, I'm ready to go
-	  </p>
+      </p>
 
 
   <div class="story">
@@ -142,14 +114,11 @@ Have you listened to the great Toto IV album? This song draws inspiration from t
 
 
 
-  <!-- Biisi 2 -->
-
   <div class="box" id="goinghome">
         <img src="images/goinghome.jpg" style="width:100%">
     <h2 class="w3-wide">Going Home</h2>
 
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="goinghome" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
 </p>
 
@@ -186,14 +155,11 @@ More 80's Toto influence... maybe too much? ;) I don't really care. If it sounds
 
   </div>
 
-  <!-- Biisi 3 -->
-
-<div class="box" id="housewithbrokenmirrors">
+  <div class="box" id="housewithbrokenmirrors">
        <img src="images/housewithbrokenmirrors.jpg" style="width:100%">
     <h2 class="w3-wide">House with Broken Mirrors</h2>
 
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="housewithbrokenmirrors" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
 </p>
 
@@ -253,14 +219,11 @@ I wanted to write a country song with a cruel story. One version of this was a t
 
 
 
-  <!-- Biisi 4 -->
-
   <div class="box" id="savemysoul">
         <img src="images/savemysoul.jpg" style="width:100%">
     <h2 class="w3-wide">Save My Soul</h2>
 
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="savemysoul" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
 </p>
 
@@ -307,14 +270,11 @@ In the darkest hour there is still a glimpse of light for the one who reaches fo
 </div>
 
 
-  <!-- Biisi 5 -->
-
   <div class="box" id="deadlycombination">
         <img src="images/deadlycombination.jpg" style="width:100%">
     <h2 class="w3-wide">Deadly Combination</h2>
 
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="deadlycombination" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
 </p>
 
@@ -352,13 +312,11 @@ A story about dealing with a narcist who was always on the lookout for weaknesse
 
 
 
-  <!-- Biisi 6 -->
-
   <div class="box" id="saintindisguise">
         <img src="images/saintindisguise.jpg" style="width:100%">
     <h2 class="w3-wide">Saint in Disguise</h2>
 
-  <!-- musikantit -->
+  <p class="w3-opacity">
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="saintindisguise" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
 </p>
 
@@ -397,14 +355,11 @@ Sometimes just a small gesture can make a world of difference! I had this happen
 </div>
 
 
-  <!-- Biisi 7-->
-
   <div class="box" id="iwillmakeituptoyou">
         <img src="images/iwillmakeituptoyou.jpg" style="width:100%">
     <h2 class="w3-wide">I Will Make It up to You</h2>
 
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="iwillmakeituptoyou" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
 </p>
 
@@ -437,14 +392,11 @@ Forgiving and asking for forgiveness. If you want to grow, you have to look at t
 
 
 
-  <!-- Biisi 8 -->
-
   <div class="box" id="something">
         <img src="images/something.jpg" style="width:100%">
     <h2 class="w3-wide">Something</h2>
 
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="images/heikki.jpg" data-lightbox="something" data-title="Click the right half of the image to move forward.">Heikki Vähänen bass</a>
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="something" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
     </p>
@@ -482,13 +434,10 @@ Some people are just mysteries, enigmas, intriguing and awesome! Being around th
 </div>
 
 
-  <!-- Biisi 9 -->
-
   <div class="box" id="talkinginmysleep">
         <img src="images/talkinginmysleep.jpg" style="width:100%">
     <h2 class="w3-wide">Talking in my Sleep</h2>
-  <!-- musikantit -->
-    <p class="w3-opacity">
+  <p class="w3-opacity">
  <a class="example-image-link" href="../masa/images/matti3.jpg" data-lightbox="talkinginmysleep" data-title="Click the right half of the image to move forward.">Matti Kärki lyrics and music</a>
 </p>
 
@@ -542,6 +491,14 @@ BTW, when does weekend start? On Friday or Saturday, what time?
 <br>
 
 
-</div>
+<script>
+function toggleSubMenu() {
+    if (window.innerWidth <= 600) {
+        var nav = document.getElementById('sub-nav');
+        nav.classList.toggle('active');
+    }
+}
+</script>
+
 </body>
 </html>

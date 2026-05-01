@@ -116,7 +116,7 @@ h1 {
 }
 
 h2 {
-  font-size: 11px;
+  font-size: 18px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(234,234,234,0.5);
@@ -162,4 +162,34 @@ p {
   .content {
     grid-template-columns: 1fr;
   }
+}
+
+/* PAGE CONTENTS */
+
+.box {
+  margin-bottom: 60px;
+}
+
+.box > img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.box iframe {
+  max-width: 100%;
+}
+
+.story {
+  border-left: 2px solid #d7b86f;
+  padding-left: 20px;
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-top: 60px;
+}
+
+
+.chorus {
+  font-style: italic;
+  color: #d7b86f;
+  margin: 20px 0;
 }

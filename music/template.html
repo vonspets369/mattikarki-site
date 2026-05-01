@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../images/favicon.png">
+
+  <title>Matti Kärki - PROJECT TITLE</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css">
+
+  <link rel="stylesheet" href="../../lightbox/dist/css/lightbox.min.css">
+  <script src="../../lightbox/dist/js/lightbox-plus-jquery.js"></script>
+</head>
+
+<body id="top">
+
+<div id="nav"></div>
+
+<main class="page">
+
+<section class="hero">
+  <div class="cover">
+    <a href="images/cd.jpg" data-lightbox="cover">
+      <img src="images/cd.jpg" alt="PROJECT TITLE">
+    </a>
+  </div>
+
+  <div>
+    <div class="meta">TYPE · YEAR · CATEGORY</div>
+    <h1>PROJECT TITLE</h1>
+    <div class="artist">Matti Kärki</div>
+  </div>
+</section>
+
+<p class="intro">
+  INTRO TEXT HERE.
+</p>
+
+<div class="rule"></div>
+
+<section class="content">
+  <div>
+    <h2>SECTION TITLE</h2>
+    <p>
+      TEXT HERE.
+    </p>
+  </div>
+
+  <div>
+    <h2>SECTION TITLE</h2>
+    <p>
+      TEXT HERE.
+    </p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section>
+  <h2>Links</h2>
+
+  <p>
+    <a href="https://example.com" target="_blank" rel="noopener">External link</a>
+  </p>
+</section>
+
+<div id="footer"></div>
+
+</main>
+
+<script>
+  const load = (id, file) => {
+    fetch(file)
+      .then(res => res.text())
+      .then(data => document.getElementById(id).innerHTML = data);
+  };
+
+  load('nav', '../../assets/nav.html');
+  load('footer', '../../assets/footer.html');
+</script>
+
+</body>
+</html>
