@@ -144,8 +144,9 @@ p {
   margin-top: 60px;
 }
 
-#footer > * {
+.site-footer {
   width: min(1120px, 90%);
+  margin: 0 auto;
   text-align: center;
 }
 
