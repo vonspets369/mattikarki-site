@@ -137,12 +137,15 @@ p {
 
 /* FOOTER */
 
-.site-footer {
-  margin-top: 70px;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(234,234,234,0.35);
+#footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#footer .site-footer {
+  width: min(1120px, 90%);
 }
 
 /* RESPONSIVE */
