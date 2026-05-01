@@ -139,21 +139,14 @@ p {
 
 #footer {
   width: 100%;
-  display: flex;
-  justify-content: center;
   margin-top: 60px;
-
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(234,234,234,0.35);
+  text-align: center;
 }
 
 .site-footer {
   width: min(1120px, 90%);
   margin: 0 auto;
   text-align: center;
-
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
