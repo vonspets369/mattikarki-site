@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com');
+
+/* ==================================
+    BASE & RESET
+================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img { display: block; }
+
+html, body {
+    height: 100%;
+    background: #1e1e1e;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background-color 0.5s ease;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    user-select: none;
+    color: #888; 
+}
+
+/* Perusasetus: kaikki on normaalia */
+body {
+    cursor: default;
+}
+
+/* Linkit ja kategoriat: selkeä sormi-ikoni vain kun se on oikeasti klikattavissa */
+a, .footer-link, .gallery-img, .close-btn, .nav-btn, .nav-btn-zoom, #slideshow-btn, #info-toggle-btn {
+    cursor: pointer;
+}
+
+/* Extras-nappi: Kursori muuttuu sormeksi vasta kun se on "avautunut" */
+button[data-cat="extras"] {
+    cursor: default;
+}
+
+/* Lightboxin kuva: 
+   - Jos kuva on normaali, se viestii että klikkaus vaihtaa kuvaa (nuoli).
+   - Jos kuva on zoomattu, se viestii että sitä voi liikuttaa (käsi). */
+#popup-img {
+    cursor: w-resize; /* Oletuksena sivunuolet */
+}
+
+#popup-img:active {
+    cursor: grabbing !important;
+}
+
+/* Luokka, joka lisätään hoverissa */
+.cursor-hover {
+    width: 60px !important;
+    height: 60px !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+/* ==================================
+    TEEMAVÄRIT (DARK MODE - OLETUS)
+================================== */
+h1, h2, p, span, .footer-link, .categories button, #comment-box p, #lock-label {
+    color: #888;
+    transition: color 0.5s ease, opacity 2.5s ease, filter 0.5s ease;
+}
+
+/* Lukon harmaasävy oletuksena */
+#lock-label {
+    filter: grayscale(100%) brightness(0.8);
+}
+
+/* Aktiiviset ja Hover-tilat (Valkoinen) */
+/* POISTETTU :not-estot, jotta hover toimii kaikilla */
+.categories button:hover, 
+.categories button.active, 
+.footer-link:hover,
+.categories button:hover #lock-label,
+.categories button.active #lock-label {
+    color: #ffffff !important;
+    filter: grayscale(0%) brightness(1);
+    opacity: 1 !important;
+}
+
+/* ==================================
+    TEEMAVÄRIT (LIGHT MODE)
+================================== */
+body.light-mode {
+    background-color: #f2f0e9;
+}
+
+body.light-mode #popup {
+    background-color: #f2f0e9;
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode p, 
+body.light-mode span, 
+body.light-mode .footer-link, 
+body.light-mode .categories button, 
+body.light-mode #comment-box p,
+body.light-mode #lock-label {
+    color: #333333 !important;
+}
+
+/* Vaalean tilan lukkoasetus */
+body.light-mode #lock-label {
+    filter: grayscale(100%) brightness(0.3);
+}
+
+/* Aktiiviset ja Hover-tilat vaaleassa tilassa (Musta) */
+body.light-mode .categories button:hover, 
+body.light-mode .categories button.active, 
+body.light-mode .footer-link:hover,
+body.light-mode .categories button:hover #lock-label,
+body.light-mode .categories button.active #lock-label {
+    color: #000000 !important;
+    filter: grayscale(0%) brightness(0);
+    opacity: 1 !important;
+}
+
+/* Varmistetaan vielä, että lukko-nappi ei näytä sormi-kursoria */
+button[data-cat="extras"] {
+    cursor: default !important;
+}
+
+/* Logon kääntö vaaleassa tilassa */
+body.light-mode .top-container img {
+    filter: invert(1);
+}
+
+/* ==================================
+    TYPOGRAFIA JA KOOT
+================================== */
+#about-content p, #comment-box p, .footer-link, .categories button, .site-footer p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.top-container { padding: 20px 20px 10px; text-align: center; }
+
+h1 { 
+    font-weight: 600; 
+    letter-spacing: 4px; 
+    text-transform: uppercase; 
+    margin-bottom: 10px; 
+    font-size: 24px; 
+}
+
+h2.subtitle { 
+    font-size: 12px; 
+    font-weight: 600; 
+    letter-spacing: 4px; 
+    text-transform: uppercase; 
+    line-height: 1.8; 
+    margin-bottom: 10px; 
+    text-align: center; 
+}
+
+.categories { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 5px; 
+}
+
+.categories button { 
+    background: none; 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+}
+
+/* ==================================
+    GALLERIA & ULKOASU
+================================== */
+.content-wrapper { 
+    overflow-y: auto; 
+    padding: 20px 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.gallery { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, 100px); 
+    gap: 10px; 
+    width: 100%; 
+    max-width: 1760px; 
+    justify-content: center; 
+    margin: 0 auto; 
+}
+
+@media (min-width: 1780px) { 
+    .gallery { grid-template-columns: repeat(16, 100px); } 
+}
+
+.gallery-img { 
+    width: 100px !important; 
+    height: 100px !important; 
+    object-fit: cover !important; 
+    background-color: #1a1a1a; 
+    transition: transform 0.2s ease; 
+    cursor: pointer; 
+}
+
+.gallery-img:hover { 
+    transform: scale(1.04); 
+}
+
+#about-content { 
+    display: none; 
+    text-align: center; 
+    max-width: 600px; 
+    padding: 10px; 
+    margin: 0 auto; 
+}
+
+#about-content.active { display: block; }
+
+#info-gallery { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 10px; 
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+#about-content p { 
+    line-height: 1.8 !important; 
+    margin-bottom: 20px; 
+}
+
+.site-footer { padding: 15px 20px; text-align: center; }
+.footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 8px; }
+.footer-link { text-decoration: none; background: none; border: none; cursor: pointer; }
+
+/* ==================================
+    POPUP / LIGHTBOX
+================================== */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #1e1e1e;
+    z-index: 2000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+#popup-img {
+    max-width: 95vw;
+    max-height: calc(100vh - 120px); 
+    width: auto; height: auto;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.controls-wrapper {
+    position: absolute !important;
+    top: 15px !important; right: 15px !important;
+    display: flex !important; flex-direction: column !important; gap: 10px !important;
+}
+
+/* EXIF-infonappi - Erittäin pieni ja huomaamaton */
+#info-toggle-btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px;           /* Pienennetty koko */
+    color: #888;               /* Sama harmaa kuin muualla */
+    cursor: pointer;
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: color 0.5s ease;
+    user-select: none;
+    background: none !important;
+    border: none !important;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Light Mode - Teeman mukainen väri */
+body.light-mode #info-toggle-btn {
+    color: #333 !important;
+}
+/* EXIF-infonappi - Neliömäinen ℹ tekstiversiona */
+#info-toggle-btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px;           /* Pienempi kuin teksti, jotta se on hienovarainen */
+    color: inherit;            /* Ottaa värin suoraan teemasta (#888 / #333) */
+    cursor: pointer;
+    margin-left: 8px;
+    vertical-align: middle;
+    background: none !important;
+    border: none !important;
+    padding: 0;
+    line-height: 1;
+    user-select: none;
+    transition: opacity 0.3s ease;
+
+}
+
+/* Poistetaan hover-värit, lisätään vain pieni kirkastuminen */
+#info-toggle-btn:hover {
+    opacity: 1;
+    background: none !important;
+}
+
+/* EXIF-teksti - Tyyli identtinen comment-box p kanssa */
+#exif-display {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: inherit;
+    display: none;             /* Oletuksena piilossa */
+    text-align: center;
+}
+
+
+/* Lightbox Painikkeet (Harmaa pohja oletuksena) */
+.close-btn, .nav-btn-zoom, .nav-btn, button#slideshow-btn {
+    width: 35px !important; height: 35px !important;
+    display: flex !important; align-items: center !important; justify-content: center !important;
+    background: rgba(40, 40, 40, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #888 !important; cursor: pointer; border-radius: 4px !important;
+}
+
+/* Lightbox Painikkeet vaaleassa tilassa */
+body.light-mode .close-btn, 
+body.light-mode .nav-btn-zoom, 
+body.light-mode .nav-btn, 
+body.light-mode button#slideshow-btn {
+    background: rgba(240, 240, 240, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: #333333 !important;
+}
+
+.nav-btn { position: absolute !important; top: 50% !important; transform: translateY(-50%) !important; }
+#prev-btn { left: 15px !important; }
+#next-btn { right: 15px !important; }
+
+#comment-box { margin-top: 15px; height: 30px; text-align: center; }
+
+@media (max-width: 768px) { 
+    .nav-btn { display: none !important; } 
+}
+
+/* ANIMAATIOT */
+#lock-label { display: inline-block; }
+@keyframes fadeInGlow { 0% { opacity: 0; } 100% { opacity: 1; } }
+.reveal-anim { animation: fadeInGlow 5s ease-in-out-out; forwards; }
+
+
+/* ==================================
+    STORY + EXIF ICON BUTTON FIX
+================================== */
+#story-btn,
+#exif-btn {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: inherit !important; /* sama kuin teksti (#888 / #333) */
+    font-size: 12px;
+    cursor: pointer;
+
+    padding: 0 6px;
+    margin-left: 6px;
+
+    line-height: 1;
+    vertical-align: middle;
+
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+#story-btn:hover,
+#exif-btn:hover {
+    opacity: 1;
+}

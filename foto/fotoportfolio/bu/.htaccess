@@ -1,0 +1,11 @@
+RewriteEngine on
+
+# 1. Salli tyhjät viittaajat (jos joku avaa kuvan suoralla linkillä)
+RewriteCond %{HTTP_REFERER} ^$ [OR]
+
+# 2. Salli oma domainisi (vaihda omasivusi.fi)
+# Tämä rivi sallii http, https, www ja ilman www
+RewriteCond %{HTTP_REFERER} ^https?://(www\.)?omasivusi\.fi [NC]
+
+# 3. Jos mikään yllä olevista ei täyty, estä pääsy WebP ja muihin kuviin
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]

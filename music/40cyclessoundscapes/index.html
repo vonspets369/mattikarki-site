@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../images/favicon.png">
+
+  <title>Matti Kärki - 40 Cycles Soundscapes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css">
+
+  <link rel="stylesheet" href="../../lightbox/dist/css/lightbox.min.css">
+  <script src="../../lightbox/dist/js/lightbox-plus-jquery.js"></script>
+</head>
+
+<body id="top">
+
+<div id="nav"></div>
+
+<main class="page">
+
+<section class="hero">
+  <div class="cover">
+    <a href="images/cd.jpg" data-lightbox="cd">
+      <img src="images/cd.jpg" alt="40 Cycles Soundscapes">
+    </a>
+  </div>
+
+  <div>
+    <div class="meta">Album · 2022 · Soundscapes</div>
+    <h1>40 Cycles Soundscapes</h1>
+    <div class="artist">Matti Kärki</div>
+  </div>
+</section>
+
+<p class="intro">
+  This album promotes relaxation through sound. It leverages the 40Hz frequency to influence the thalamus in the brain.
+  Numerous
+  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167876017300387" target="_blank" rel="noopener">
+    scientific studies
+  </a>
+  have demonstrated that 40Hz balances brain waves via the thalamus, inducing a sense of tranquility in the listener.
+</p>
+
+<div class="rule"></div>
+
+<section class="content">
+  <div>
+    <h2>About the album</h2>
+    <p>
+      This album promotes relaxation through sound. It leverages the 40Hz frequency to influence the thalamus in the brain.
+      Numerous
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167876017300387" target="_blank" rel="noopener">
+        scientific studies
+      </a>
+      have demonstrated that 40Hz balances brain waves via the thalamus, inducing a sense of tranquility in the listener.
+    </p>
+  </div>
+
+  <div>
+    <h2>Sound method</h2>
+    <p>
+      To artificially generate a 40Hz frequency within the brain, I have employed wide binaural sounds. This technique involves
+      panning two distinct frequencies, one to the left and one to the right. The brain then synthesizes a third frequency.
+    </p>
+
+    <p>
+      More information:
+      <a href="https://www.webmd.com/balance/what-are-binaural-beats" target="_blank" rel="noopener">
+        Binaural beats
+      </a>
+    </p>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+</main>
+
+<script>
+  const load = (id, file) => {
+    fetch(file)
+      .then(res => res.text())
+      .then(data => document.getElementById(id).innerHTML = data);
+  };
+
+  load('nav', '../../assets/nav.html');
+  load('footer', '../../assets/footer.html');
+</script>
+
+</body>
+</html>
