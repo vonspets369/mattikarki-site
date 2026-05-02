@@ -9,8 +9,8 @@ const jsFile = path.join(root, "photos_all.js");
 const toUploadFile = path.join(root, "to-upload.txt");
 
 // OIKEA InfinityFree-polku
-const remoteRoot = "/mattikarki.rf.gd/htdocs/fotoportfolio";
-const remoteImagesDir = "/mattikarki.rf.gd/htdocs/fotoportfolio/images";
+const remoteRoot = "/mattikarki.rf.gd/htdocs/foto/fotoportfolio";
+const remoteImagesDir = "/mattikarki.rf.gd/htdocs/foto/fotoportfolio/images";
 
 async function upload() {
   if (!fs.existsSync(toUploadFile)) {

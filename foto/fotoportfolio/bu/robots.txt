@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: http://mattikarki.rf.gd/fotoportfolio/sitemap.xml
