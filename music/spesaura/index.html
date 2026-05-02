@@ -1,52 +1,65 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../images/favicon.png">
 
-<link rel="icon" href="../images/favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Matti Kärki - Spes Aura</title>
+  <title>Matti Kärki - Spes Aura</title>
 
-<link rel="stylesheet" href="../lightbox/dist/css/lightbox.min.css">
-<script src="../lightbox/dist/js/lightbox-plus-jquery.js"></script>
-<link href="../lightbox/lightbox.css" rel="stylesheet">
-<link rel="stylesheet" href="../css/1.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="../css/2.css"
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css">
 
+  <link rel="stylesheet" href="../../lightbox/dist/css/lightbox.min.css">
+  <script src="../../lightbox/dist/js/lightbox-plus-jquery.js"></script>
 </head>
+
+<body id="top">
+
+<div id="nav"></div>
+
+<main class="page">
+
+<section class="hero">
+  <div class="cover">
+    <a href="images/cd.jpg" data-lightbox="cover">
+      <img src="images/cd.jpg" alt="Spes Aura">
+    </a>
+  </div>
+
+  <div>
+    <div class="meta">ALBUM · 2025 · AOR POP/ROCK</div>
+    <h1>Spes Aura</h1>
+    <div class="artist">Matti Kärki</div>
+  </div>
+</section>
+
+<p class="intro">
+  It is time for my fourth AOR pop/rock album. This is a working draft page where I shape the songs, lyrics and ideas before the final release.
+</p>
+
+<div class="rule"></div>
+
+<section class="content">
+  <div>
+    <h2>Concept</h2>
+    <p>
+      The album explores themes of love, hope and emotional growth. Even when things feel uncertain, there is always something carrying us forward.
+    </p>
+  </div>
+
+  <div>
+    <h2>Status</h2>
+    <p>
+      This album is not released yet. Player links (YouTube / Spotify) will be added later.
+    </p>
+  </div>
+</section>
+
+<div class="rule"></div>
 
 <body>
 
-<video playsinline autoplay muted loop>
-  <source src="../_videos/earth.mp4" type="video/mp4">
-</video>
-
-<!-- Navbar -->
-
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"></a>
-	  <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">TOP</a>
-    <div class="w3-dropdown-hover">
-      <a href="#songs" class="w3-bar-item w3-button w3-padding-large">SONGS</a>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#icanwaitforever" class="w3-bar-item w3-button">1  I Can Wait Forever</a>
-        <a href="#beautifulgirl" class="w3-bar-item w3-button">2  Beautiful Girl</a>
-        <a href="#andidanced" class="w3-bar-item w3-button">3  And I Danced</a>
-        <a href="#findinglove" class="w3-bar-item w3-button">4  Finding Love</a>
-        <a href="#iwillbeyourman" class="w3-bar-item w3-button">5  I Will Be Your Man</a>
-        <a href="#whenyoumeetsomeone" class="w3-bar-item w3-button">6  When You Meet Someone</a>
-        <a href="#imready" class="w3-bar-item w3-button">7  I'm Ready</a>
-        <a href="#unspokenlove" class="w3-bar-item w3-button">8  Unspoken Love</a>
-      </div>
-    </div>
-
-</div>
-
-</div>
 
 <!-- Page content -->
 
@@ -445,6 +458,19 @@ A classic 80's style song á la Toto, but the lyrics are in different style. It 
  <h3>Thanks for listening!<br>I hope you liked the album!</h3>
 </div>
 <br>
+
+<div id="footer"></div>
+
+<script>
+const load = (id, file) => {
+  fetch(file)
+    .then(res => res.text())
+    .then(data => document.getElementById(id).innerHTML = data);
+};
+
+load('nav', '../../assets/nav.html');
+load('footer', '../../assets/footer.html');
+</script>
 
 
 <!-- End Page Content -->
