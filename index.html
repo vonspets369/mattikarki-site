@@ -83,15 +83,25 @@
 <!-- FOOTER -->
 <div id="footer">
 </div>
-
 <script>
   const load = (id, file) => {
     fetch(file)
       .then(res => res.text())
-      .then(data => document.getElementById(id).innerHTML = data);
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+
+        // kun footer ladattu → päivitä vuosi
+        if (id === "footer") {
+          const yearEl = document.getElementById("year");
+          if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+          }
+        }
+      });
   };
 
-  load('footer', 'assets/footer.html');
+  load('nav', '../../assets/nav.html');
+  load('footer', '../../assets/footer.html');
 </script>
 
 </body>

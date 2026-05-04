@@ -3,27 +3,29 @@ const photoData = [
    // { src: 'images/gear.webp', cat: 'info', title: 'Equipment', date: '2026' },
 
     { src: 'images/17.webp', cat: 'curated', title: 'Sauna roof', date: '2025', description: 'Löyly - public sauna in Helsinki. There was a smiling woman on the roof.',exif: "Canon 5D Mark IV | f/4.0 | 1/500 | ISO 200" },
-    { src: 'images/110.webp', cat: 'curated', title: 'Finland', date: '2018' },
+    { src: 'images/117.webp', cat: 'curated', title: 'Mama', date: '2026' },
+
+    { src: 'images/163.webp', cat: 'curated', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' },
     { src: 'images/144.webp', cat: 'curated', title: 'The Gap', date: '2026' },
+
+    { src: 'images/110.webp', cat: 'curated', title: 'Finland', date: '2018' },
     { src: 'images/148.webp', cat: 'curated', title: 'Good Life', date: '2026' },
-    { src: 'images/09.webp', cat: 'curated', title: 'Drawing fire', date: '2025' },
+    { src: 'images/145.webp', cat: 'curated', title: 'The Path', date: '2026' },
+
+    { src: 'images/126.webp', cat: 'curated', title: 'Smoker Dude', date: '2026' },
+    { src: 'images/162.webp', cat: 'curated', title: 'Invisible Man', date: '2026', description: 'When noboby sees you in a busy street.', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
+
+    { src: 'images/127.webp', cat: 'curated', title: 'Entering', date: '2026' },
+    { src: 'images/76.webp', cat: 'curated', title: 'My neighbour about to have a smoke', date: '2025' },
+
     { src: 'images/16.webp', cat: 'curated', title: 'Done biking', date: '2025' },
+    { src: 'images/95.webp', cat: 'curated', title: 'Hesitation', date: '2013' },
+
+    { src: 'images/50.webp', cat: 'curated', title: 'Red coat', date: '2025' },
+    { src: 'images/147.webp', cat: 'curated', title: 'Time Passing By', date: '2026' },
+
     { src: 'images/53.webp', cat: 'curated', title: 'My way back home', date: '2011' },
     { src: 'images/52.webp', cat: 'curated', title: 'My friend is gone', date: '2013' },
-    { src: 'images/65.webp', cat: 'curated', title: 'The burden', date: '2026' },
-    { src: 'images/117.webp', cat: 'curated', title: 'Mama', date: '2026' },
-    { src: 'images/126.webp', cat: 'curated', title: 'Smoker Dude', date: '2026' },
-    { src: 'images/124.webp', cat: 'curated', title: 'Winter Cafe', date: '2026' },
-    { src: 'images/134.webp', cat: 'curated', title: 'Siva', date: '2026' },
-    { src: 'images/76.webp', cat: 'curated', title: 'My neighbour about to have a smoke', date: '2025' },
-    { src: 'images/50.webp', cat: 'curated', title: 'Red coat', date: '2025' },
-    { src: 'images/95.webp', cat: 'curated', title: 'Hesitation', date: '2013' },
-    { src: 'images/139.webp', cat: 'curated', title: 'Do Not Drop', date: '2026' },
-    { src: 'images/10.webp', cat: 'curated', title: 'Hats for sale', date: '2025' },
-    { src: 'images/127.webp', cat: 'curated', title: 'Entering', date: '2026' },
-    { src: 'images/108.webp', cat: 'curated', title: 'Lamps', date: '2014' },
-    { src: 'images/23.webp', cat: 'curated', title: 'Snow hats', date: '2025' },
-    { src: 'images/109.webp', cat: 'curated', title: 'Dead Bicycle', date: '2014' },
 
    
     { src: 'images/01.webp', cat: 'extras', title: 'Legs', date: '2025' },
@@ -59,7 +61,7 @@ const photoData = [
     { src: 'images/31.webp', cat: 'extras', title: 'Funny bunny', date: '2016' },
     { src: 'images/32.webp', cat: 'extras', title: 'Are you not gonna rub me?!', date: '2011' },
     { src: 'images/33.webp', cat: 'extras', title: 'Friend?', date: '2013' },
-    { src: 'images/34.webp', cat: 'extras', title: 'That extrasing beautiful seaweed', date: '2025' },
+    { src: 'images/34.webp', cat: 'extras', title: 'That disgusting beautiful seaweed', date: '2025' },
     { src: 'images/35.webp', cat: 'extras', title: 'Blacksmith skills from 1920', date: '2025' },
     { src: 'images/36.webp', cat: 'extras', title: 'End of season', date: '2025' },
     { src: 'images/37.webp', cat: 'extras', title: 'Spiders took over', date: '2025' },
@@ -187,4 +189,6 @@ const photoData = [
     { src: 'images/159.webp', cat: 'extras', title: 'The Moon at My Balcony', date: '2026', exif: 'Canon EOS R6 Mark III | f/8.0 | 1/500 | ISO 1600' },
     { src: 'images/160.webp', cat: 'extras', title: 'Working Man', date: '2026', exif: 'Canon EOS R6 Mark III | f/5.6 | 1/1000 | ISO 8000' },
     { src: 'images/161.webp', cat: 'extras', title: 'Home', date: '2026', description: 'Weird place for a bird home in Helsinki City??', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1250 | ISO 250' },
+    { src: 'images/162.webp', cat: 'extras', title: 'Invisible Man', date: '2026', description: 'When noboby sees you in a busy street.', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
+    { src: 'images/163.webp', cat: 'extras', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' }
 ];

@@ -184,6 +184,12 @@ const photoData = [
 ,
 
     // AUTO ADDED
-    { src: 'images/161.webp', cat: 'happiness', title: 'Home', date: '2026', description: 'Weird place for a bird home in Helsinki City??', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1250 | ISO 250' }
+    { src: 'images/161.webp', cat: 'happiness', title: 'Home', date: '2026', description: 'Weird place for a bird home in Helsinki City??', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1250 | ISO 250' },
+
+    // AUTO ADDED
+    { src: 'images/162.webp', cat: 'sadness', title: 'Invisible Man', date: '2026', description: 'When noboby sees you in a busy street.', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/163.webp', cat: 'surprise', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' }
 
 ];
