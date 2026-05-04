@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://mattikarki.rf.gd/fotoportfolio/images/mk.webp" />
 
 <link rel="icon" type="image/png" href="images/favicon.png" />
-<link rel="stylesheet" href="style1.css?v=2.0" />
+<link rel="stylesheet" href="assets/style1.css?v=2.0" />
 </head>
 
 <body oncontextmenu="return false;">
@@ -67,19 +67,9 @@ Perhaps. But we all see the world a little differently.</p>
   <div class="gallery" id="gallery"></div>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-links">
-    <button class="footer-link" data-cat="info">About the author</button>
-<a href="https://www.instagram.com/masa.karki" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
- <span id="theme-toggle" class="footer-link" style="cursor: pointer;">Theme</span>
-<a href="../../index.html" rel="noopener noreferrer" class="footer-link">Main site</a>
-
-  </div>
-
-  <p style="font-size: 8px; letter-spacing: 2px; text-transform: uppercase;">
-    &copy; 2026 MATTI KÄRKI. ALL RIGHTS RESERVED.
-  </p>
-</footer>
+<!-- FOOTER -->
+<div id="footer">
+</div>
 
 <div id="popup">
     <div class="controls-wrapper">
@@ -97,6 +87,26 @@ Perhaps. But we all see the world a little differently.</p>
 
 <script src="photos_all.js"></script>
 <script src="gallery.js"></script>
+
+<script>
+  const load = (id, file) => {
+    fetch(file)
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+
+        // kun footer ladattu → päivitä vuosi
+        if (id === "footer") {
+          const yearEl = document.getElementById("year");
+          if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+          }
+        }
+      });
+  };
+
+  load('footer', 'assets/footer.html');
+</script>
 
 </body>
 </html>
