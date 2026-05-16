@@ -2,33 +2,22 @@ const photoData = [
     { src: 'images/mk.webp', cat: 'info', title: 'Author', date: '2025' },
    // { src: 'images/gear.webp', cat: 'info', title: 'Equipment', date: '2026' },
 
-    { src: 'images/163.webp', cat: 'curated', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' },
-    { src: 'images/144.webp', cat: 'curated', title: 'The Gap', date: '2026' },
 
-    { src: 'images/16.webp', cat: 'curated', title: 'Done biking', date: '2025' },
-    { src: 'images/95.webp', cat: 'curated', title: 'Hesitation', date: '2013' },
+  // CURATED
+    { src: 'images/31.webp', cat: 'curated', title: 'Funny bunny', date: '2016' },
+    { src: 'images/103.webp', cat: 'curated', title: 'Confusion', date: '2010' },
 
-    { src: 'images/17.webp', cat: 'curated', title: 'Sauna roof', date: '2025', description: 'Löyly - public sauna in Helsinki. There was a smiling woman on the roof.',exif: "Canon 5D Mark IV | f/4.0 | 1/500 | ISO 200" },
-    { src: 'images/117.webp', cat: 'curated', title: 'Mama', date: '2026' },
+    { src: 'images/104.webp', cat: 'curated', title: 'Kid', date: '2014' },
+    { src: 'images/76.webp', cat: 'curated', title: 'My neighbour about to have a smoke', date: '2025' },
 
-    { src: 'images/110.webp', cat: 'curated', title: 'Finland', date: '2018' },
-    { src: 'images/148.webp', cat: 'curated', title: 'Good Life', date: '2026' },
-    { src: 'images/145.webp', cat: 'curated', title: 'The Path', date: '2026' },
+    { src: 'images/115.webp', cat: 'curated', title: 'Kiddo', date: '2014' },
+    { src: 'images/70.webp', cat: 'curated', title: 'What are you looking at!', date: '2025' },
 
-    { src: 'images/162.webp', cat: 'curated', title: 'Invisible Man', date: '2026', description: 'When noboby sees you in a busy street.', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
-    { src: 'images/126.webp', cat: 'curated', title: 'Smoker Dude', date: '2026' },
+    { src: 'images/165.webp', cat: 'curated', title: 'Me?', date: '2026', exif: 'Canon EOS R6 Mark III | f/2.8 | 1/500 | ISO 5000' },
+    { src: 'images/164.webp', cat: 'curated', title: 'Aunt', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/160 | ISO 12800' }, 
 
-    { src: 'images/127.webp', cat: 'curated', title: 'Entering', date: '2026' },
-    { src: 'images/166.webp', cat: 'curated', title: 'Rest', date: '2026', exif: 'Canon EOS R6 Mark III | f/8.0 | 1/1250 | ISO 800' },
-    { src: 'images/44.webp', cat: 'curated', title: 'Lack of presence', date: '2025' },
 
-    { src: 'images/50.webp', cat: 'curated', title: 'Red coat', date: '2025' },
-    { src: 'images/147.webp', cat: 'curated', title: 'Time Passing By', date: '2026' },
-
-    { src: 'images/52.webp', cat: 'curated', title: 'My friend is gone', date: '2013' },
-    { src: 'images/53.webp', cat: 'curated', title: 'My way back home', date: '2011' },
-
-   
+  // EXTRAS
     { src: 'images/01.webp', cat: 'extras', title: 'Legs', date: '2025' },
     { src: 'images/02.webp', cat: 'extras', title: 'Espa lights', date: '2025' },
     { src: 'images/03.webp', cat: 'extras', title: 'Xmas lights', date: '2025' },
@@ -191,5 +180,7 @@ const photoData = [
     { src: 'images/160.webp', cat: 'extras', title: 'Working Man', date: '2026', exif: 'Canon EOS R6 Mark III | f/5.6 | 1/1000 | ISO 8000' },
     { src: 'images/161.webp', cat: 'extras', title: 'Home', date: '2026', description: 'Weird place for a bird home in Helsinki City??', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1250 | ISO 250' },
     { src: 'images/162.webp', cat: 'extras', title: 'Invisible Man', date: '2026', description: 'When noboby sees you in a busy street.', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
-    { src: 'images/163.webp', cat: 'extras', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' }
+    { src: 'images/163.webp', cat: 'extras', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' },
+    { src: 'images/164.webp', cat: 'extras', title: 'Aunt', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/160 | ISO 12800' }, 
+    { src: 'images/165.webp', cat: 'extras', title: 'Me?', date: '2026', exif: 'Canon EOS R6 Mark III | f/2.8 | 1/500 | ISO 5000' },
 ];

@@ -39,7 +39,6 @@
 
 
 <nav class="categories">
-    <button data-cat="info">About the author</button>
     <button data-cat="curated">Photos</button> 
 <button data-cat="extras"><span id="lock-label">🔒</span></button>
 </nav>
@@ -85,7 +84,7 @@ My work embraces minimalism and abstract expression, often infused with subtle h
 </div>
 
 <script src="photos_curated.js"></script>
-<script src="gallery_extras.js"></script>
+<script src="assets/gallery_engine.js?v=1.0"></script>
 
 <script>
   const load = (id, file) => {
@@ -94,7 +93,6 @@ My work embraces minimalism and abstract expression, often infused with subtle h
       .then(data => {
         document.getElementById(id).innerHTML = data;
 
-        // kun footer ladattu → päivitä vuosi
         if (id === "footer") {
           const yearEl = document.getElementById("year");
           if (yearEl) {
@@ -104,7 +102,17 @@ My work embraces minimalism and abstract expression, often infused with subtle h
       });
   };
 
-  load('footer', 'assets/footer.html');
+  load("footer", "assets/footer.html");
+
+  document.addEventListener("click", (e) => {
+    const infoBtn = e.target.closest('[data-cat="info"]');
+
+    if (infoBtn) {
+      e.preventDefault();
+      filterImages("info");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
 </script>
 </body>
 </html>

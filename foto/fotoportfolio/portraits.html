@@ -33,46 +33,45 @@
   Lens
 </h1>
 
+
+
 <h2 class="subtitle">Photography through four decades by Matti Kärki</h2>
 
+
 <nav class="categories">
-    <button data-cat="happiness">Happiness</button>
-    <button data-cat="sadness">Sadness</button>
-    <button data-cat="anger">Anger</button>
-    <button data-cat="fear">Fear</button>
-    <button data-cat="surprise">Surprise</button>
-    <button data-cat="disgust">Disgust</button>
-    <button data-cat="all">All at once</button>
+    <button data-cat="curated">Portraits</button> 
+<button data-cat="extras"><span id="lock-label">🔒</span></button>
 </nav>
 </header>
 
 <main class="content-wrapper">
   <section id="about-content">
     <div class="gallery" id="info-gallery"></div>
-
 <p>Could you have captured my photos?<br><br>
-Perhaps. But we all see the world a little differently.</p>
+Perhaps. But we all see the world a little differently.
+My work embraces minimalism and abstract expression, often infused with subtle humor or fleeting spontaneity.</p>
 
-<p>My work leans toward minimalism and abstraction, often shaped by light, form, and small moments of spontaneity — sometimes even a touch of humor.</p>
-
-<p>Each photograph carries a feeling for me. I have grouped them by emotion, not by genre, to offer a different kind of journey.</p>
+<p>I have curated these portraits to offer a thoughtful journey—moving beyond mainstream aesthetics to share the quiet, warm, and unpolished glimpses of the world as I see it.</p>
 
 <p>I don't use any generative AI.</p>
 
-<p>Based in Vantaa, Finland.</p>
+    <p>Based in Vantaa, Finland.</p>
   </section>
 
   <div class="gallery" id="gallery"></div>
 </main>
 
+
 <!-- FOOTER -->
 <div id="footer">
 </div>
 
+
+
 <div id="popup">
     <div class="controls-wrapper">
         <div class="close-btn">&times;</div>
-        <button id="fullscreen-btn" class="nav-btn-zoom" title="Full Screen">⛶</button>
+<button id="fullscreen-btn" class="nav-btn-zoom" title="Full Screen">⛶</button>
         <button id="zoom-in" class="nav-btn-zoom">+</button>
         <button id="zoom-out" class="nav-btn-zoom">−</button>
         <button id="slideshow-btn" class="nav-btn-zoom">Play</button>
@@ -84,7 +83,7 @@ Perhaps. But we all see the world a little differently.</p>
     <div id="comment-box"></div>
 </div>
 
-<script src="photos_all.js"></script>
+<script src="photos_portraits.js"></script>
 <script src="assets/gallery_engine.js?v=1.0"></script>
 
 <script>
@@ -104,10 +103,6 @@ Perhaps. But we all see the world a little differently.</p>
   };
 
   load("footer", "assets/footer.html");
-
-  if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-mode");
-  }
 
   document.addEventListener("click", (e) => {
     const infoBtn = e.target.closest('[data-cat="info"]');

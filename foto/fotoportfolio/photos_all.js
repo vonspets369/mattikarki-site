@@ -7,7 +7,7 @@ const photoData = [
     { src: 'images/03.webp', cat: 'happiness', title: 'Xmas lights', date: '2025' },
     { src: 'images/14.webp', cat: 'happiness', title: 'Air balloons of Xmas', date: '2025' },
     { src: 'images/17.webp', cat: 'happiness', title: 'Sauna roof', date: '2025', description: 'Löyly - public sauna in Helsinki. There was a smiling woman on the roof.', exif: "Canon 5D Mark IV | f/4.0 | 1/500 | ISO 200" },
-    { src: 'images/31.webp', cat: 'happiness', title: 'Funny bunny', date: '2016' },
+        // { src: 'images/31.webp', cat: 'happiness', title: 'Funny bunny', date: '2016' },
     { src: 'images/47.webp', cat: 'happiness', title: 'You gotta see this!', date: '2025' },
     { src: 'images/51.webp', cat: 'happiness', title: 'Melanie', date: '2025' },
     { src: 'images/79.webp', cat: 'happiness', title: 'Melanie', date: '2025' },
@@ -19,10 +19,10 @@ const photoData = [
     { src: 'images/68.webp', cat: 'happiness', title: 'Australian Open', date: '2026' },
     { src: 'images/83.webp', cat: 'happiness', title: 'Parenting', date: '2026' },
     { src: 'images/88.webp', cat: 'happiness', title: 'Mimosa', date: '1998' },
-    { src: 'images/96.webp', cat: 'happiness', title: 'Summer evening', date: '2018' },
+        // { src: 'images/96.webp', cat: 'happiness', title: 'Summer evening', date: '2018' },
     { src: 'images/110.webp', cat: 'happiness', title: 'Finland', date: '2018' },
     { src: 'images/113.webp', cat: 'happiness', title: 'Get together', date: '2014' },
-    { src: 'images/116.webp', cat: 'happiness', title: 'I got it all!', date: '2016' },
+        // { src: 'images/116.webp', cat: 'happiness', title: 'I got it all!', date: '2016' },
     { src: 'images/124.webp', cat: 'happiness', title: 'Winter Cafe', date: '2026' },
     { src: 'images/127.webp', cat: 'happiness', title: 'Entering', date: '2026' },
     { src: 'images/132.webp', cat: 'happiness', title: 'Green Line', date: '2025' },
@@ -59,7 +59,7 @@ const photoData = [
     { src: 'images/85.webp', cat: 'sadness', title: 'I chose this place', date: '2025' },
     { src: 'images/89.webp', cat: 'sadness', title: 'Autumn', date: '2011' },
     { src: 'images/91.webp', cat: 'sadness', title: 'Waiting', date: '2011' },
-    { src: 'images/104.webp', cat: 'sadness', title: 'Kid', date: '2014' },
+        // { src: 'images/104.webp', cat: 'sadness', title: 'Kid', date: '2014' },
     { src: 'images/106.webp', cat: 'sadness', title: 'Remembering', date: '2013' },
     { src: 'images/111.webp', cat: 'sadness', title: 'Stairs', date: '2014' },
     { src: 'images/117.webp', cat: 'sadness', title: 'Mama', date: '2026' },
@@ -184,12 +184,37 @@ const photoData = [
 ,
 
     // AUTO ADDED
-    { src: 'images/161.webp', cat: 'happiness', title: 'Home', date: '2026', description: 'Weird place for a bird home in Helsinki City??', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1250 | ISO 250' },
+    { src: 'images/161.webp', cat: 'happiness', title: 'Home', date: '2026', description: 'Weird place for a bird home in Helsinki City??', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1250 | ISO 250' }
+,
 
     // AUTO ADDED
     { src: 'images/162.webp', cat: 'sadness', title: 'Invisible Man', date: '2026', description: 'When noboby sees you in a busy street.', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
 
     // AUTO ADDED
-    { src: 'images/163.webp', cat: 'surprise', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' }
+    { src: 'images/163.webp', cat: 'surprise', title: 'Two Different Worlds', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/164.webp', cat: 'happiness', title: 'Aunt', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/160 | ISO 12800' },
+
+    // AUTO ADDED
+        // { src: 'images/165.webp', cat: 'sadness', title: 'Me?', date: '2026', exif: 'Canon EOS R6 Mark III | f/2.8 | 1/500 | ISO 5000' },
+
+    // AUTO ADDED
+    { src: 'images/166.webp', cat: 'happiness', title: 'Rest', date: '2026', exif: 'Canon EOS R6 Mark III | f/8.0 | 1/1250 | ISO 800' },
+
+    // AUTO ADDED
+    { src: 'images/167.webp', cat: 'happiness', title: 'Steps and shadows', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/168.webp', cat: 'happiness', title: 'Steps and shadows', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/169.webp', cat: 'happiness', title: 'Steps and shadows', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/170.webp', cat: 'disgust', title: 'Water colors', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/1000 | ISO 1250' },
+
+    // AUTO ADDED
+    { src: 'images/171.webp', cat: 'surprise', title: 'Jewels', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/1000 | ISO 1000' }
 
 ];
