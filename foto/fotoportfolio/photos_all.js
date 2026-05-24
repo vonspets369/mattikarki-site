@@ -215,6 +215,45 @@ const photoData = [
     { src: 'images/170.webp', cat: 'disgust', title: 'Water colors', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/1000 | ISO 1250' },
 
     // AUTO ADDED
-    { src: 'images/171.webp', cat: 'surprise', title: 'Jewels', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/1000 | ISO 1000' }
+    { src: 'images/171.webp', cat: 'surprise', title: 'Jewels', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/1000 | ISO 1000' },
+
+    // AUTO ADDED
+    { src: 'images/172.webp', cat: 'sadness', title: 'Connection', date: '2026', description: 'Connection or not? Who knows...', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/800 | ISO 250' },
+
+    // AUTO ADDED
+    { src: 'images/173.webp', cat: 'sadness', title: 'Waiting for the rain to stop', date: '2026', exif: 'Canon EOS R6 Mark III | f/8.0 | 1/800 | ISO 2000' },
+
+    // AUTO ADDED
+    { src: 'images/174.webp', cat: 'surprise', title: 'Drip drip', date: '2026', exif: 'Canon EOS R6 Mark III | f/8.0 | 1/800 | ISO 2500' },
+
+    // AUTO ADDED
+    { src: 'images/175.webp', cat: 'disgust', title: 'I see you and..', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 400' },
+
+    // AUTO ADDED
+    { src: 'images/176.webp', cat: 'sadness', title: 'A Break', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 400' },
+
+    // AUTO ADDED
+    { src: 'images/177.webp', cat: 'happiness', title: 'Old', date: '2026', exif: 'Canon EOS R6 Mark III | f/8.0 | 1/1000 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/178.webp', cat: 'sadness', title: 'The Business', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 160' },
+
+    // AUTO ADDED
+    { src: 'images/179.webp', cat: 'anger', title: 'Counting', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 160' },
+
+    // AUTO ADDED
+    { src: 'images/180.webp', cat: 'happiness', title: 'Dad, wait!', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/181.webp', cat: 'fear', title: 'A Feeling', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 250' },
+
+    // AUTO ADDED
+    { src: 'images/182.webp', cat: 'anger', title: 'A Moment Together', date: '2026', exif: 'Canon EOS R6 Mark III | f/4.0 | 1/1000 | ISO 320' },
+
+    // AUTO ADDED
+    { src: 'images/183.webp', cat: 'happiness', title: 'Swing', date: '2026', exif: 'Canon EOS R6 Mark III | f/7.1 | 1/500 | ISO 100' },
+
+    // AUTO ADDED
+    { src: 'images/184.webp', cat: 'fear', title: 'Cleaner Dude', date: '2026', exif: 'Canon EOS R6 Mark III | f/11.0 | 1/500 | ISO 250' }
 
 ];

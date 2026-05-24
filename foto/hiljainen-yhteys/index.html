@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fi">
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Basic SEO -->
+<title>hiljainen yhteys - matti kärki</title>
+
+<meta name="description" content="hiljainen yhteys on matti kärjen minimalistinen valokuvanäyttely ja verkossa jatkuva katselukokemus. teos tutkii hiljaisuutta, etäisyyttä, tilaa, ihmisen pienuutta ja yhteyden syntymistä." />
+
+<meta name="keywords" content="hiljainen yhteys, Matti Kärki, valokuvanäyttely, valokuvaus, minimalistinen valokuvaus, Vantaa, Tikkurila, valokuvataide, fine art photography, photography" />
+
+<meta name="author" content="Matti Kärki" />
+<meta name="robots" content="index, follow" />
+
+<link rel="canonical" href="https://mattikarki.rf.gd/foto/hiljainen-yhteys/" />
+
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="hiljainen yhteys - matti kärki" />
+<meta property="og:description" content="minimalistinen valokuvanäyttely ja verkossa jatkuva katselukokemus. hiljaisuutta, tilaa, etäisyyttä ja yhteyden syntymistä." />
+<meta property="og:url" content="https://mattikarki.rf.gd/foto/hiljainen-yhteys/" />
+<meta property="og:site_name" content="matti kärki" />
+<meta property="og:image" content="https://mattikarki.rf.gd/foto/hiljainen-yhteys/images/og-image.jpg" />
+<meta property="og:image:alt" content="hiljainen yhteys -valokuvanäyttelyn kuva, jossa ihminen näkyy pienessä mittakaavassa hiljaisessa tilassa." />
+<meta property="og:locale" content="fi_FI" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="hiljainen yhteys - matti kärki" />
+<meta name="twitter:description" content="minimalistinen valokuvanäyttely ja verkossa jatkuva katselukokemus. hiljaisuutta, tilaa, etäisyyttä ja yhteyden syntymistä." />
+<meta name="twitter:image" content="https://mattikarki.rf.gd/foto/hiljainen-yhteys/og-image.jpg" />
+<meta name="twitter:image:alt" content="hiljainen yhteys -valokuvanäyttelyn kuva, jossa ihminen näkyy pienessä mittakaavassa hiljaisessa tilassa." />
+
+<link rel="stylesheet" href="assets/style1.css" />
+<link rel="icon" href="images/favicon.png" type="image/png" />
+</head>
+
+<body>
+
+<div id="intro" class="screen active">
+    <div class="title">hiljainen yhteys</div>
+</div>
+
+<div id="viewer" class="screen">
+    <img id="mainImage" src="" alt="" />
+    
+    <div id="textLayer"></div>
+
+    <div id="uiLayer" class="hidden">
+        <button id="muteBtn">ääni</button>
+    </div>
+
+    <div class="click-zone left" id="prevZone"></div>
+    <div class="click-zone right" id="nextZone"></div>
+</div>
+
+<div id="ending" class="screen">
+    <video id="endingVideo" autoplay muted loop playsinline>
+        <source src="video/ending.mp4" type="video/mp4">
+    </video>
+
+<div id="endingOverlay">
+    <div id="endingText"></div>
+    <div id="credit">hiljainen yhteys - matti kärki 2026</div>
+    <button id="restartBtn">alkuun tai paina Esc</button>
+</div>
+</div>
+
+<audio id="ambientAudio" loop preload="auto">
+    <source src="audio/ambient.mp3" type="audio/mpeg">
+</audio>
+
+<script src="assets/hy_engine.js"></script>
+
+</body>
+</html>
