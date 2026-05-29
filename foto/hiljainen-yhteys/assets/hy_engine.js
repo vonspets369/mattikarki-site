@@ -24,10 +24,6 @@ const uiLayer = document.getElementById("uiLayer");
 const ambientAudio = document.getElementById("ambientAudio");
 const muteBtn = document.getElementById("muteBtn");
 
-const nextZone = document.getElementById("nextZone");
-const prevZone = document.getElementById("prevZone");
-const restartBtn = document.getElementById("restartBtn");
-
 let current = 0;
 let secondRound = false;
 
@@ -37,32 +33,31 @@ let firstInteractionConsumed = false;
 let audioUnlocked = false;
 let audioEnabled = true;
 
-let viewerStarted = false;
-let imageTimer = null;
-
-/* 
-   Preload first image early so that it is ready when viewer starts.
-   This helps especially on mobile.
-*/
-const firstImagePreload = new Image();
-firstImagePreload.src = images[0].src;
-
 window.addEventListener("load", () => {
-    setTimeout(() => {
-        startViewer();
-    }, 5200);
+    showOpeningQuestion();
 });
 
-function startViewer() {
-    if (viewerStarted) return;
+function showOpeningQuestion() {
+    const title = document.querySelector(".title");
 
-    viewerStarted = true;
-    current = 0;
+    title.innerHTML = "hiljainen yhteytesi?";
+    title.style.animation = "none";
+    title.style.transition = "opacity 2s ease";
+    title.style.opacity = 0;
 
-    intro.classList.remove("active");
-    viewer.classList.add("active");
+    setTimeout(() => {
+        title.style.opacity = 1;
+    }, 300);
 
-    showImage(true);
+    setTimeout(() => {
+        title.style.opacity = 0;
+    }, 3600);
+
+    setTimeout(() => {
+        intro.classList.remove("active");
+        viewer.classList.add("active");
+        showImage();
+    }, 6200);
 }
 
 document.body.addEventListener("click", (event) => {
@@ -71,30 +66,15 @@ document.body.addEventListener("click", (event) => {
 
         event.stopPropagation();
 
-        if (!viewerStarted) {
-            startViewer();
-        }
-
         if (!fullscreenStarted) {
             fullscreenStarted = true;
 
             if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen().catch(() => {});
+                document.documentElement.requestFullscreen();
             }
         }
 
         unlockAudioSilently();
-
-        /*
-           Important:
-           Do not advance to the next image on the first interaction.
-           But make sure the first image is visible if the browser delayed it.
-        */
-        if (!mainImage.src) {
-            current = 0;
-            showImage(true);
-        }
-
         return;
     }
 
@@ -151,53 +131,22 @@ function startSecondRoundAudio() {
         .catch(() => {});
 }
 
-function showImage(immediate = false) {
+function showImage() {
     const item = images[current];
-    if (!item) return;
-
-    if (imageTimer) {
-        clearTimeout(imageTimer);
-        imageTimer = null;
-    }
 
     textLayer.style.opacity = 0;
     textLayer.innerHTML = "";
 
     mainImage.style.opacity = 0;
 
-    const delay = immediate ? 80 : 2000;
-
-    imageTimer = setTimeout(() => {
-        /*
-           Set onload before changing src.
-           This is more reliable on mobile and with cached images.
-        */
-        mainImage.onload = () => {
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    mainImage.style.opacity = 1;
-                });
-            });
-        };
-
-        mainImage.onerror = () => {
-            console.warn("Kuvaa ei voitu ladata:", item.src);
-        };
-
+    setTimeout(() => {
         mainImage.src = item.src;
-        mainImage.alt = item.text || "hiljainen yhteys - valokuva";
 
-        /*
-           If the image is already cached, onload may not always behave
-           consistently across browsers. This ensures visibility anyway.
-        */
-        if (mainImage.complete && mainImage.naturalWidth > 0) {
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    mainImage.style.opacity = 1;
-                });
-            });
-        }
+        mainImage.onload = () => {
+            setTimeout(() => {
+                mainImage.style.opacity = 1;
+            }, 300);
+        };
 
         if (secondRound) {
             uiLayer.classList.remove("hidden");
@@ -209,7 +158,7 @@ function showImage(immediate = false) {
         } else {
             uiLayer.classList.add("hidden");
         }
-    }, delay);
+    }, 2000);
 }
 
 function nextImage() {
@@ -268,6 +217,7 @@ function showEnding() {
 
         const endingVideo = document.getElementById("endingVideo");
         const endingText = document.getElementById("endingText");
+        const restartBtn = document.getElementById("restartBtn");
         const credit = document.getElementById("credit");
 
         endingVideo.pause();
@@ -276,14 +226,17 @@ function showEnding() {
 
         endingText.innerHTML = "";
         endingText.style.opacity = 0;
+        endingText.style.transition = "opacity 2s ease";
 
         restartBtn.style.opacity = 0;
         restartBtn.style.pointerEvents = "none";
 
+        credit.innerHTML = "";
         credit.style.opacity = 0;
+        credit.style.transition = "opacity 2s ease";
 
         setTimeout(() => {
-            endingVideo.play().catch(() => {});
+            endingVideo.play();
 
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
@@ -293,22 +246,73 @@ function showEnding() {
         }, 300);
 
         setTimeout(() => {
-            endingText.innerHTML = "yhteys syntyy joskus hiljaa";
-
-            setTimeout(() => {
-                endingText.style.opacity = 1;
-            }, 50);
+            showReflectionQuestion(endingText, credit, restartBtn);
         }, 6000);
 
-        setTimeout(() => {
-            credit.style.opacity = 1;
-        }, 11500);
-
-        setTimeout(() => {
-            restartBtn.style.opacity = 1;
-            restartBtn.style.pointerEvents = "auto";
-        }, 14500);
     }, 2000);
+}
+
+function showReflectionQuestion(endingText, credit, restartBtn) {
+    endingText.innerHTML = `
+        <div style="margin-bottom: 2.2rem;">hiljainen yhteytesi?</div>
+
+        <button class="reflection-choice" data-choice="ihminen">○ ihminen</button>
+        <button class="reflection-choice" data-choice="paikka">○ paikka</button>
+        <button class="reflection-choice" data-choice="muisto">○ muisto</button>
+        <button class="reflection-choice" data-choice="aika">○ aika</button>
+        <button class="reflection-choice" data-choice="minä">○ minä</button>
+    `;
+
+    endingText.style.opacity = 1;
+
+    const buttons = endingText.querySelectorAll(".reflection-choice");
+
+    buttons.forEach((button) => {
+        button.style.display = "block";
+        button.style.margin = "0.55rem auto";
+        button.style.background = "transparent";
+        button.style.border = "none";
+        button.style.color = "rgba(255,255,255,0.86)";
+        button.style.font = "inherit";
+        button.style.fontSize = "1rem";
+        button.style.letterSpacing = "0.04em";
+        button.style.cursor = "pointer";
+        button.style.padding = "0.2rem 0.6rem";
+
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            handleReflectionChoice(endingText, credit, restartBtn);
+        }, { once: true });
+    });
+}
+
+function handleReflectionChoice(endingText, credit, restartBtn) {
+    endingText.style.transition = "opacity 2s ease";
+    endingText.style.opacity = 0;
+
+    setTimeout(() => {
+        endingText.innerHTML = "yhteys syntyy joskus hiljaa";
+        endingText.style.opacity = 1;
+    }, 2200);
+
+    setTimeout(() => {
+        endingText.style.opacity = 0;
+    }, 7200);
+
+    setTimeout(() => {
+        credit.innerHTML = `
+            <div>hiljainen yhteys</div>
+            <div style="margin-top: 1.2rem;">matti kärki</div>
+            <div style="margin-top: 0.4rem;">2026</div>
+        `;
+
+        credit.style.opacity = 1;
+    }, 9500);
+
+    setTimeout(() => {
+        restartBtn.style.opacity = 1;
+        restartBtn.style.pointerEvents = "auto";
+    }, 13500);
 }
 
 if (muteBtn && ambientAudio) {
@@ -330,43 +334,33 @@ if (muteBtn && ambientAudio) {
     });
 }
 
-if (nextZone) {
-    nextZone.addEventListener("click", nextImage);
-}
+document.getElementById("nextZone").addEventListener("click", nextImage);
+document.getElementById("prevZone").addEventListener("click", prevImage);
 
-if (prevZone) {
-    prevZone.addEventListener("click", prevImage);
-}
+document.getElementById("restartBtn").addEventListener("click", (event) => {
+    event.stopPropagation();
 
-if (restartBtn) {
-    restartBtn.addEventListener("click", (event) => {
-        event.stopPropagation();
+    current = 0;
+    secondRound = false;
 
-        current = 0;
-        secondRound = false;
+    ending.classList.remove("active");
+    intro.classList.add("active");
 
-        ending.classList.remove("active");
-        viewer.classList.add("active");
+    viewer.classList.remove("active");
+    uiLayer.classList.add("hidden");
 
-        uiLayer.classList.add("hidden");
+    textLayer.innerHTML = "";
+    textLayer.style.opacity = 0;
 
-        textLayer.innerHTML = "";
-        textLayer.style.opacity = 0;
+    if (ambientAudio) {
+        ambientAudio.pause();
+        ambientAudio.currentTime = 0;
+        ambientAudio.volume = 0;
+        audioUnlocked = false;
+    }
 
-        mainImage.src = "";
-        mainImage.style.opacity = 0;
+    firstInteractionConsumed = false;
+    fullscreenStarted = false;
 
-        if (ambientAudio) {
-            ambientAudio.pause();
-            ambientAudio.currentTime = 0;
-            ambientAudio.volume = 0;
-            audioUnlocked = false;
-        }
-
-        firstInteractionConsumed = false;
-        fullscreenStarted = false;
-        viewerStarted = true;
-
-        showImage(true);
-    });
-}
+    showOpeningQuestion();
+});

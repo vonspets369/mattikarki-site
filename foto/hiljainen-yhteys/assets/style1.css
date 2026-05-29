@@ -68,15 +68,24 @@ body {
     bottom: 7vh;
     left: 50%;
     transform: translateX(-50%);
+
     max-width: 70vw;
+
     text-align: center;
     font-size: 1rem;
     line-height: 1.8;
-    letter-spacing: 0.02em;
-    font-weight: 300;
-    color: rgba(255,255,255,0.88);
+
     opacity: 0;
     transition: opacity 4s ease;
+
+    color: rgba(255,255,255,0.88);
+
+    font-weight: 300;
+    letter-spacing: 0.02em;
+
+    background: rgba(0,0,0,0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
 }
 
 #uiLayer {
